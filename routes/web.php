@@ -17,6 +17,7 @@ use Lushidev\ApiLocation\Test;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/courses',[CourseController::class,'index'])->name('courses');
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -26,7 +27,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/courses',[CourseController::class,'index'])->name('courses');
+
 
 
     // $this->ip = $_SERVER[REMOTE_ADDR];
